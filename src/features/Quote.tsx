@@ -10,11 +10,14 @@ export default function Quote() {
     transition: 'background-color .3s linear'
   }
 
-  const colorStyle = { color: quote.data.color, transition: 'max-height 1s'}
+  const colorStyle = {
+    color: quote.data.color,
+    transition: 'color .3s linear'
+  }
  
   return (
     <div className={styles.container} style={backgroundStyle}>
-      <a className={styles.githubLink} href="https://github.com/pavelgorbach/quotemachine" target="_blank" rel="noopener noreferrer">
+      <a className={styles.githubLink} href="https://github.com/pavelgorbach/quotemachine" target="blank" rel="noopener noreferrer">
         <img src={gitHubLogo} className={styles.githubLogo} alt="GitHub" />
       </a>
 
