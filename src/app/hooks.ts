@@ -12,7 +12,7 @@ export function useQuote() {
   const quote = useSelector(selectQuote)
   
   useEffect(() => {
-    dispatch(getQuoteAsync)
+    dispatch(getQuoteAsync())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   

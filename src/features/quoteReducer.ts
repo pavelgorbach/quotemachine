@@ -27,6 +27,7 @@ export const success = (payload: Quote) => ({ type: 'SUCCESS' as const, payload 
 export const error = (payload: string) => ({ type: 'ERROR' as const, payload })
 
 export const getQuoteAsync = () => {
+  console.log('GET')
   return async (dispatch: Dispatch) => {
     dispatch(fetching())
     
