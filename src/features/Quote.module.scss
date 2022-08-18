@@ -12,13 +12,12 @@ $color-white: white;
   width: 100vw;
   height: 100vh;
   grid-template-rows: 50px auto 1fr;
-  grid-template-columns: minmax(300px, auto);
+  grid-template-columns: minmax(300px, 800px);
   padding: 0 20px 20px;
   row-gap: 20px;
   justify-content: center;
   align-items: center;
   position: fixed;
-  transition: 'background-color, .3s';
 }
 
 .githubLink {
@@ -33,7 +32,7 @@ $color-white: white;
   max-width: 700px;
   background-color: $color-white;
   padding: 40px 50px;
-  border-radius: $border-radius;  
+  border-radius: $border-radius;
 }
 
 .text {

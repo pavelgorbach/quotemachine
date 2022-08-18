@@ -27,7 +27,6 @@ export const success = (payload: Quote) => ({ type: 'SUCCESS' as const, payload 
 export const error = (payload: string) => ({ type: 'ERROR' as const, payload })
 
 export const getQuoteAsync = () => {
-  console.log('GET')
   return async (dispatch: Dispatch) => {
     dispatch(fetching())
     
@@ -47,9 +46,9 @@ export const quoteReducer = (state = defaultQuoteState, action: Actions): QuoteS
     case 'FETCHING':
       return {...state, fetching: true}
     case 'SUCCESS':
-      return {...state, quote: action.payload, fetching: false }
+      return {...state, quote: action.payload, fetching: false}
     case 'ERROR':
-      return {...state, error: action.payload, fetching: false }
+      return {...state, error: action.payload, fetching: false}
     default:
       return state
   }

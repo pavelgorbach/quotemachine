@@ -7,11 +7,11 @@ export default function Quote() {
 
   const boxStyle = {
     backgroundColor: quote.data.color,
-    transition: 'background-color, .3s'
+    transition: 'background-color .5s linear'
   }
 
-  const textStyle = { color: quote.data.color, transition: 'color, .3s'}
-  
+  const textStyle = { color: quote.data.color, transition: 'color .5s linear'}
+ 
   return (
     <div className={styles.container} style={boxStyle}>
       <a className={styles.githubLink} href="https://github.com/pavelgorbach/quotemachine" target="_blank" rel="noopener noreferrer">
@@ -19,10 +19,10 @@ export default function Quote() {
       </a>
 
       <h1>Quote Machine</h1>
-
-      <div className={styles.quote}id="quote-box" style={textStyle}>
-        <div className={styles.text} id="text"><q>{quote.data.content}</q></div>
-        <div className={styles.author} id="author">- {quote.data.author}</div>
+   
+      <div className={styles.quote} id="quote-box" style={textStyle}>
+          <div className={styles.text} id="text"><q>{quote.data.content}</q></div>
+          <div className={styles.author} id="author">- {quote.data.author}</div>
 
         <div className={styles.footer}>
           <a
