@@ -1,0 +1,60 @@
+$border-radius: 5px;
+$color-white: white;
+
+@mixin font-family($size) {
+  font-size: $size;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 'background-color, .3s'
+}
+
+.quote {
+  width: 450px;
+  background-color: $color-white;
+  padding: 40px 50px;
+  border-radius: $border-radius;  
+}
+
+.text {
+  @include font-family(1.75em);
+  margin-bottom: 20px;
+}
+
+.author {
+  @include font-family(1em);
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweetQuote {
+  @include font-family(.75em);
+}
+
+.newQuote {
+  border: none;
+  color: $color-white;
+  padding: 10px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  
+  &[disabled] {
+    cursor: default;
+  }
+}
