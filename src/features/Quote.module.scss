@@ -34,6 +34,15 @@ $color-white: white;
   border-radius: $border-radius;
 }
 
+.fadeIn {
+  animation: fade .5s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+} 
+
 .text {
   @include font-family(1.75em);
   margin-bottom: 20px;

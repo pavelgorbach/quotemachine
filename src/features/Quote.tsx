@@ -14,7 +14,9 @@ export default function Quote() {
     color: quote.data.color,
     transition: 'color .3s linear'
   }
- 
+
+  const fadeIn = quote.fetching ? {} : styles.fadeIn
+
   return (
     <div className={styles.container} style={backgroundStyle}>
       <a className={styles.githubLink} href="https://github.com/pavelgorbach/quotemachine" target="blank" rel="noopener noreferrer">
@@ -24,8 +26,10 @@ export default function Quote() {
       <h1>Quote Machine</h1>
    
       <div className={styles.quote} id="quote-box">
+        <div className={`${fadeIn}`}>
           <div className={styles.text} id="text"><q>{quote.data.content}</q></div>
           <div className={styles.author} id="author">- {quote.data.author}</div>
+        </div>
 
         <div className={styles.footer}>
           <a
