@@ -7,17 +7,18 @@ $color-white: white;
 }
 
 .container {
+  display: grid;
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  display: grid;
   grid-template-rows: 50px auto 1fr;
+  grid-template-columns: minmax(300px, auto);
+  padding: 0 20px 20px;
   row-gap: 20px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   position: fixed;
-  overflow: hidden;
-  transition: 'background-color, .3s'
+  transition: 'background-color, .3s';
 }
 
 .githubLink {
@@ -29,7 +30,7 @@ $color-white: white;
 }
 
 .quote {
-  max-width: 500px;
+  max-width: 700px;
   background-color: $color-white;
   padding: 40px 50px;
   border-radius: $border-radius;  
