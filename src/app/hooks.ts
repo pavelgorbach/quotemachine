@@ -13,6 +13,7 @@ export function useQuote() {
   
   useEffect(() => {
     dispatch(getQuoteAsync)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   const getNewQuote = useCallback(() => {
