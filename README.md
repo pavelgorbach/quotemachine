@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App] and deployed on [Heroku](h
 
 Read on [freeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine)
 
+## Development
+
 ### `yarn start`
 
 Runs the app in the development mode.\
