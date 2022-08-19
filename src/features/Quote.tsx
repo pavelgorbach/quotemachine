@@ -15,42 +15,42 @@ export default function Quote() {
     transition: 'color .3s linear'
   }
 
-  const fadeIn = quote.fetching ? {} : styles.fadeIn
-
   return (
     <div className={styles.container} style={backgroundStyle}>
       <a className={styles.githubLink} href="https://github.com/pavelgorbach/quotemachine" target="blank" rel="noopener noreferrer">
         <img src={gitHubLogo} className={styles.githubLogo} alt="GitHub" />
       </a>
 
-      <h1>Quote Machine</h1>
+      <h1 className={styles.title}>Quote Machine</h1>
    
-      <div className={styles.quote} id="quote-box">
-        <div className={`${fadeIn}`}>
-          <div className={styles.text} id="text"><q>{quote.data.content}</q></div>
-          <div className={styles.author} id="author">- {quote.data.author}</div>
-        </div>
+      {!quote.fetching && (
+        <div className={[styles.quote, styles.fadeIn].join(' ')} id="quote-box">
+          <div>
+            <div className={styles.text} id="text"><q>{quote.data.content}</q></div>
+            <div className={styles.author} id="author">- {quote.data.author}</div>
+          </div>
 
-        <div className={styles.footer}>
-          <a
-            id="tweet-quote"
-            className={styles.tweetQuote}
-            style={colorStyle}
-            href="https://twitter.com/intent/tweet"
-            target="blank">
-              Tweet
-          </a>
+          <div className={styles.footer}>
+            <a
+              id="tweet-quote"
+              className={styles.tweetQuote}
+              style={colorStyle}
+              href="https://twitter.com/intent/tweet"
+              target="blank">
+                Tweet
+            </a>
 
-          <button
-            id="new-quote"
-            className={styles.newQuote}
-            style={backgroundStyle}
-            disabled={quote.fetching}
-            onClick={quote.getNew}>
-              New quote
-          </button>
+            <button
+              id="new-quote"
+              className={styles.newQuote}
+              style={backgroundStyle}
+              disabled={quote.fetching}
+              onClick={quote.getNew}>
+                New quote
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
